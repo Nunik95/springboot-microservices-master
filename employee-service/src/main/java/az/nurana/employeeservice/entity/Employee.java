@@ -22,5 +22,8 @@ public class Employee {
     private String lastName;
     @Column
     private String email;
+    @Column
+    private String departmentCode;
+
 
 }

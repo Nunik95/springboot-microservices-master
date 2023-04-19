@@ -1,6 +1,7 @@
 package az.nurana.employeeservice.controller;
 
 
+import az.nurana.employeeservice.dto.ApiResponseDto;
 import az.nurana.employeeservice.dto.EmployeeDto;
 import az.nurana.employeeservice.service.EmployeeService;
 import lombok.AllArgsConstructor;
@@ -21,9 +22,9 @@ public class EmployeeServiceController {
     }
 
     @GetMapping("{employee-id}")
-    public ResponseEntity <EmployeeDto> getEmployee(@PathVariable("employee-id") Long id) {
-        EmployeeDto employeeDto=employeeService.getEmployeeById(id);
-        return new ResponseEntity<>(employeeDto, HttpStatus.OK);
+    public ResponseEntity <ApiResponseDto> getEmployee(@PathVariable("employee-id") Long id) {
+        ApiResponseDto apiResponseDto=employeeService.getEmployeeById(id);
+        return new ResponseEntity<>(apiResponseDto, HttpStatus.OK);
     }
 
 }
