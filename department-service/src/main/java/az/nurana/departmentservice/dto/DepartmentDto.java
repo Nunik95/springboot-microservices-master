@@ -9,11 +9,13 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class DepartmentDto {
+
     private Long id;
 
-    private String departnmentName;
+    private String departmentName;
 
     private String departmentDescription;
 
     private String departmentCode;
+
 }
